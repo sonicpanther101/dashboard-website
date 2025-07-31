@@ -13,6 +13,8 @@ interface TaskDefinition {
 const GIST_ID = process.env.GIST_ID;
 const TOKEN = process.env.TOKEN;
 
+console.log(GIST_ID, TOKEN);
+
 async function readUpdate(setTasks: React.Dispatch<React.SetStateAction<TaskDefinition[]>>) {
   try {
     const res = await fetch(`https://api.github.com/gists/${GIST_ID}`, {
