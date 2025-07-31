@@ -1,0 +1,42 @@
+@use "variables" as *;
+
+.dashboard {
+  .menu {
+    min-width: 250px;
+    background-color: rgba($bg, 0.15);
+    padding: 20px 0;
+    
+    // Remove the global * selector
+    .menuLabel,
+    .menuButton {
+      padding: 10px 20px;
+      margin: 5px 0;
+      color: $fg;
+      font-size: 1.1rem;
+    }
+
+    .menuButton {
+      background-color: rgba($solid_bg, 1);
+      border-top-right-radius: $rounded;
+      border-bottom-right-radius: $rounded;
+      border: none;
+      text-align: left;
+      width: 100%;
+
+      &:hover {
+        background-color: rgba($bg, 0.75);
+      }
+
+      &:focus {
+        background-color: rgba($bg, 0.85);
+      }
+    }
+  }
+
+  .title {
+    color: $fg;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}
