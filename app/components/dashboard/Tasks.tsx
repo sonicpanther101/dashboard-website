@@ -67,7 +67,7 @@ const TaskItem: React.FC<{ task: TaskDefinition; index: number; path: number[]; 
   // Generic updater for edits/status
   const updateAtPath = (updater: (t: TaskDefinition) => void) => {
     const newTasks = JSON.parse(JSON.stringify(tasks)) as TaskDefinition[];
-    let current: any = newTasks;
+    let current: TaskDefinition[] = newTasks;
     for (let i = 0; i < path.length - 1; i++) {
       current = current[path[i]].subtasks!;
     }
