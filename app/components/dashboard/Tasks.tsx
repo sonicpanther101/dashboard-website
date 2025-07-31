@@ -10,8 +10,8 @@ interface TaskDefinition {
 }
 
 // Plain-text secrets (to be secured later)
-const GIST_ID = 'e96f2fe262b3992d7767f4f630b52e8b';
-const TOKEN = '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';
+const GIST_ID = process.env.GIST_ID;
+const TOKEN = process.env.TOKEN;
 
 async function readUpdate(setTasks: React.Dispatch<React.SetStateAction<TaskDefinition[]>>) {
   try {

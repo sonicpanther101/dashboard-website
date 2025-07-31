@@ -89,5 +89,8 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
         id: deployment
         uses: actions/deploy-pages@v4
