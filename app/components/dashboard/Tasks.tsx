@@ -96,7 +96,7 @@ const TaskItem: React.FC<{ task: TaskDefinition; index: number; path: number[]; 
   const rowClass = index % 2 === 0 ? 'even-scroll' : 'odd-scroll';
 
   return (
-    <div className="tasks tasks-entry ${rowClass}" style={{ paddingLeft: path.length * 16, marginBottom: 8 }}>
+    <div className={`tasks tasks-entry ${rowClass}`} style={{ paddingLeft: path.length * 16, marginBottom: 8 }}>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         {/* Move Up */}
         <button
